@@ -1,0 +1,51 @@
+{
+  "name": "akshare-mcp",
+  "version": "1.0.0",
+  "description": "MCP server providing Chinese A-share stock market data — pure TypeScript, zero Python dependency",
+  "author": "Terry",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "akshare-mcp": "dist/main.js"
+  },
+  "exports": {
+    ".": "./dist/server/mcp-server.js"
+  },
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "dev:http": "tsx src/main.ts --streamable-http",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "start:http": "node dist/main.js --streamable-http",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/ tests/",
+    "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.0.6",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "hono": "^4.12.27",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.9"
+  },
+  "keywords": [
+    "akshare",
+    "stock",
+    "mcp",
+    "mcp-server",
+    "a-share",
+    "china-stock",
+    "financial-data"
+  ],
+  "engines": {
+    "node": ">=22"
+  }
+}

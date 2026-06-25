@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+*.log
+.DS_Store
+.vscode/
+.idea/
+.claude/
+CLAUDE.md
+tests/screenshots/
+tests/scratch/
