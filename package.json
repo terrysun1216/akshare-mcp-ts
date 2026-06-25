@@ -36,14 +36,21 @@
     "typescript": "^5.9.3",
     "vitest": "^4.1.9"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
+    "ahshare",
     "akshare",
     "stock",
     "mcp",
     "mcp-server",
     "a-share",
     "china-stock",
-    "financial-data"
+    "financial-data",
+    "typescript"
   ],
   "engines": {
     "node": ">=22"
