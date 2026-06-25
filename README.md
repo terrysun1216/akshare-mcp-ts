@@ -8,6 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22-green)](https://nodejs.org/)
 [![MCP](https://img.shields.io/badge/MCP-SDK%201.29-purple)](https://modelcontextprotocol.io/)
+[![npm version](https://img.shields.io/npm/v/ahshare-mcp)](https://www.npmjs.com/package/ahshare-mcp)
 
 </div>
 
