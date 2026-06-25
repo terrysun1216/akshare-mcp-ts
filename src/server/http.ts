@@ -26,7 +26,7 @@ export function startHttpServer(
   }));
 
   // 健康检查端点
-  app.get('/health', (c) => c.json({ status: 'ok', name: 'akshare-mcp' }));
+  app.get('/health', (c) => c.json({ status: 'ok', name: 'ahshare-mcp' }));
 
   // Web Standard Streamable HTTP transport（适用于 Hono/Cloudflare Workers/Bun 等）
   const transport = new WebStandardStreamableHTTPServerTransport({

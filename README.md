@@ -15,7 +15,7 @@
 
 ## 概述
 
-**akshare-mcp** 是一个基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 的服务器，为 AI 助手（如 Claude Desktop、VS Code Copilot）提供中国 A 股市场金融数据访问能力。
+**ahshare-mcp** 是一个基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 的服务器，为 AI 助手（如 Claude Desktop、VS Code Copilot）提供中国 A 股市场金融数据访问能力。
 
 **核心特点**：与 Python 版 [akshare-one-mcp](https://github.com/zwldarren/akshare-one-mcp) 功能兼容，但使用 **纯 TypeScript 实现，零 Python 依赖**。
 
@@ -69,14 +69,14 @@
 ### 通过 npm 安装
 
 ```bash
-npm install -g akshare-mcp
+npm install -g ahshare-mcp
 ```
 
 ### 从源码安装
 
 ```bash
-git clone https://github.com/terrysun1216/akshare-mcp-ts.git
-cd akshare-mcp-ts
+git clone https://github.com/terrysun1216/ahshare-mcp-ts.git
+cd ahshare-mcp-ts
 npm install
 npm run build
 ```
@@ -92,9 +92,9 @@ npm run build
 ```json
 {
   "mcpServers": {
-    "akshare-mcp": {
+    "ahshare-mcp": {
       "command": "npx",
-      "args": ["akshare-mcp"]
+      "args": ["ahshare-mcp"]
     }
   }
 }
@@ -105,9 +105,9 @@ npm run build
 ```json
 {
   "mcpServers": {
-    "akshare-mcp": {
+    "ahshare-mcp": {
       "command": "npx",
-      "args": ["tsx", "/path/to/akshare-mcp-ts/src/main.ts"]
+      "args": ["tsx", "/path/to/ahshare-mcp-ts/src/main.ts"]
     }
   }
 }
@@ -117,10 +117,10 @@ npm run build
 
 ```bash
 # stdio 模式（默认，供 MCP 客户端使用）
-akshare-mcp
+ahshare-mcp
 
 # HTTP 模式（供远程/Web 客户端使用）
-akshare-mcp --streamable-http --port 8081
+ahshare-mcp --streamable-http --port 8081
 ```
 
 ### 示例对话

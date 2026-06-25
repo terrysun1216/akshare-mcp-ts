@@ -1,12 +1,12 @@
 {
-  "name": "akshare-mcp",
+  "name": "ahshare-mcp",
   "version": "1.0.0",
   "description": "MCP server providing Chinese A-share stock market data — pure TypeScript, zero Python dependency",
   "author": "Terry",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "akshare-mcp": "dist/main.js"
+    "ahshare-mcp": "dist/main.js"
   },
   "exports": {
     ".": "./dist/server/mcp-server.js"

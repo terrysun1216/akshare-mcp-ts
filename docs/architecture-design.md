@@ -690,10 +690,10 @@ export function createHttpApp(server: McpServer) {
 
 ```bash
 # stdio 模式（默认）
-akshare-mcp
+ahshare-mcp
 
 # HTTP 模式
-akshare-mcp --streamable-http --host 0.0.0.0 --port 8081
+ahshare-mcp --streamable-http --host 0.0.0.0 --port 8081
 ```
 
 ---
@@ -701,7 +701,7 @@ akshare-mcp --streamable-http --host 0.0.0.0 --port 8081
 ## 10. 项目目录结构
 
 ```
-akshare-mcp-ts/
+ahshare-mcp-ts/
 ├── CLAUDE.md                          # 项目规范（已有）
 ├── package.json                       # 项目配置
 ├── tsconfig.json                      # TypeScript strict 配置

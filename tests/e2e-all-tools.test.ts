@@ -10,7 +10,7 @@ function startServer(): Promise<SendResult> {
   return new Promise((resolve, reject) => {
     const proc = spawn('npx', ['tsx', 'src/main.ts'], {
       stdio: ['pipe', 'pipe', 'pipe'],
-      cwd: '/Users/sunpengcheng/Documents/AgentProjects/akshare-mcp-ts',
+      cwd: '/Users/sunpengcheng/Documents/AgentProjects/ahshare-mcp-ts',
     });
 
     const rl = createInterface({ input: proc.stdout });

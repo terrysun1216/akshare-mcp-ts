@@ -1,9 +1,9 @@
 /**
- * AKShare MCP Server — 入口
+ * AHShare MCP Server — 入口
  *
  * 支持两种运行模式:
- *   stdio (默认):     akshare-mcp
- *   streamable-http:  akshare-mcp --streamable-http [--host 0.0.0.0] [--port 8081]
+ *   stdio (默认):     ahshare-mcp
+ *   streamable-http:  ahshare-mcp --streamable-http [--host 0.0.0.0] [--port 8081]
  */
 
 import { createMcpServer } from './server/mcp-server.js';
@@ -33,9 +33,9 @@ function parseArgs(): { streamableHttp: boolean; host: string; port: number } {
         console.log(`AKShare MCP Server v1.0.0
 
 用法:
-  akshare-mcp                          默认 stdio 模式
-  akshare-mcp --streamable-http        HTTP 模式
-  akshare-mcp --streamable-http --host 0.0.0.0 --port 8081
+  ahshare-mcp                          默认 stdio 模式
+  ahshare-mcp --streamable-http        HTTP 模式
+  ahshare-mcp --streamable-http --host 0.0.0.0 --port 8081
 
 选项:
   --streamable-http   启用 HTTP 模式（默认: stdio 模式）

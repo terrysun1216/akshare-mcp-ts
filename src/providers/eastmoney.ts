@@ -23,7 +23,8 @@ import type {
  * 将股票代码转换为东方财富内部 secid 格式
  * 规则:
  *   SH → 1, SZ → 0, BJ → 0, HK → 116
- *   6位代码: 000/001/002/003/300 → 0, 600/601/603/605/688 → 1
+ *   纯数字 5 位 → 港股 (116)
+ *   6位代码: 000/001/002/003/200/300 → 0, 600/601/603/605/688 → 1
  */
 export function toSecid(symbol: string): string {
   const upper = symbol.toUpperCase();
@@ -33,22 +34,15 @@ export function toSecid(symbol: string): string {
   if (upper.startsWith('BJ')) return `0.${upper.slice(2)}`;
   if (upper.startsWith('HK')) return `116.${upper.slice(2)}`;
 
-  // 根据数字前缀推断市场
+  // 纯数字 5 位 → 港股
+  if (/^\d{5}$/.test(upper)) return `116.${upper}`;
+
+  // 根据数字前缀推断 A 股市场
   const code = upper.padStart(6, '0');
-  const prefix = code.slice(0, 3);
-  if (['000', '001', '002', '003', '200', '300'].includes(prefix)) {
-    return `0.${code}`;
-  }
-  if (prefix.startsWith('6') || prefix.startsWith('5') || prefix === '688') {
+  if (code.startsWith('6') || code.startsWith('5') || code.startsWith('9')) {
     return `1.${code}`;
   }
-  // 港股: 5位数字
-  if (/^\d{5}$/.test(code)) {
-    return `116.${code}`;
-  }
-
-  // fallback: 尝试 SH
-  return `1.${code}`;
+  return `0.${code}`;
 }
 
 // ============================================================================

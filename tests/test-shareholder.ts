@@ -7,7 +7,7 @@ import { createInterface } from 'node:readline';
 async function startServer(): Promise<{ send: (method: string, params?: any) => Promise<any>; stop: () => void }> {
   const proc = spawn('npx', ['tsx', 'src/main.ts'], {
     stdio: ['pipe', 'pipe', 'pipe'],
-    cwd: '/Users/sunpengcheng/Documents/AgentProjects/akshare-mcp-ts',
+    cwd: '/Users/sunpengcheng/Documents/AgentProjects/ahshare-mcp-ts',
   });
 
   const rl = createInterface({ input: proc.stdout });
